@@ -1,5 +1,6 @@
 package com.example.epicodus.recipeblog;
 
+import android.support.annotation.BinderThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +10,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class RecipeListActivity extends AppCompatActivity {
-    private String[] recipes = new String[] {"Mac & Cheese", "Greek Salad", "Roasted Chicken", "Fluffy Pancakes", "Veggie Lasagna"};
-    private ListView mListView;
+    private String[] recipesTitle = new String[] {"Mac & Cheese", "Greek Salad", "Roasted Chicken", "Fluffy Pancakes", "Veggie Lasagna"};
+    private String[] recipes = new String[]{"1. Bring the noodles to a boil", "1. Cut the veggies", "1. Roast the Chicken", "1.Mix the Pancake Mix", "1. PreHeat the Oven"};
+
+    @Bind(R.id.listView) ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +25,9 @@ public class RecipeListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_list);
 
-        mListView = (ListView) findViewById(R.id.listView);
+        ButterKnife.bind(this);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, recipes);
+        RecipesArrayAdapter adapter = new RecipesArrayAdapter(this, android.R.layout.simple_list_item_1, recipesTitle, recipes);
         mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
