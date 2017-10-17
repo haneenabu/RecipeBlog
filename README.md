@@ -52,6 +52,7 @@ _If there are any questions or concerns, please contact me at abukhater.haneen@g
 
 ## Known Bugs
 * The add recipe functionality doesnt work yet.
+* Need to add functionality that takes in one ingedient at a time instead of one text box
 
 
 ## Technologies Used
