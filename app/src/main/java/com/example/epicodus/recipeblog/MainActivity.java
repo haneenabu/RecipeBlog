@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_recipies) {
-            // Handle the camera action
+            Intent recipeListIntent =new Intent(MainActivity.this, RecipeListActivity.class);
+            startActivity(recipeListIntent);
 
         } else if (id == R.id.nav_about) {
             Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
