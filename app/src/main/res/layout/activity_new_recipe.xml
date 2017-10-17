@@ -12,7 +12,36 @@
         android:src="@drawable/background2"
         android:id="@+id/aboutImage"
         android:scaleType="centerCrop"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editRecipeTitle"
+        android:layout_below="@+id/editIngedient1"
+        android:layout_marginTop="16dp"
+        android:background="#70e3e3e3"
+        android:ems="10"
+        android:hint="Ingredient Two"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:id="@+id/editIngedient2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editRecipeTitle"
+        android:layout_below="@+id/editIngedient1"
+        android:layout_marginTop="16dp"
+        android:background="#70e3e3e3"
+        android:ems="10"
+        android:hint="Ingredient Two"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/black" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,35 +56,65 @@
         android:layout_marginTop="13dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editRecipeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/addrecipe"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="13dp"
         android:background="#70e3e3e3"
         android:ems="10"
         android:hint="Recipe Title"
         android:inputType="textPersonName"
+        android:textAlignment="center"
         android:textColorHint="@android:color/black" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editIngedient1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText"
-        android:layout_below="@+id/editText"
-        android:layout_marginTop="19dp"
+        android:layout_alignStart="@+id/editIngedient2"
+        android:layout_below="@+id/addrecipe"
+        android:layout_marginTop="49dp"
+        android:background="#70e3e3e3"
+        android:ems="10"
+        android:hint="Ingredient One"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/black" />
+    <EditText
+        android:id="@+id/editIngedient3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editIngedient2"
+        android:layout_below="@+id/editIngedient1"
+        android:layout_marginTop="49dp"
+        android:background="#70e3e3e3"
+        android:ems="10"
+        android:hint="Ingredient Three"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/black" />
+    <EditText
+        android:id="@+id/editDirections"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignStart="@+id/editIngedient2"
+        android:layout_below="@+id/editIngedient2"
+        android:layout_marginTop="62dp"
+        android:background="#70e3e3e3"
         android:ems="10"
         android:hint="Directions"
         android:inputType="textPersonName"
-        android:background="#70e3e3e3"
+        android:textAlignment="center"
         android:textColorHint="@android:color/black" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Add Recipe"/>
+        android:text="Add Recipe"
+        android:id="@+id/button2" />
 
 </RelativeLayout>
