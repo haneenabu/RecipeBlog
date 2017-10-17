@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.nav_recipies) {
             Intent recipeListIntent =new Intent(MainActivity.this, RecipeListActivity.class);
             startActivity(recipeListIntent);
