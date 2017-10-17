@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.epicodus.recipeblog.AboutActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/background2"
+        android:id="@+id/aboutImage"
+        android:scaleType="centerCrop"/>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -29,6 +36,7 @@
         android:text="@string/about_paragraph"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:background="#70e3e3e3"/>
 
 </RelativeLayout>
