@@ -22,18 +22,19 @@
         <activity android:name=".AboutActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.epicodus.recipeblog.MainActivity"></meta-data>
+                android:value="com.example.epicodus.recipeblog.MainActivity" />
         </activity>
         <activity android:name=".ContactActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.epicodus.recipeblog.MainActivity"></meta-data>
+                android:value="com.example.epicodus.recipeblog.MainActivity" />
         </activity>
         <activity android:name=".RecipeListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.epicodus.recipeblog.MainActivity"></meta-data>
+                android:value="com.example.epicodus.recipeblog.MainActivity" />
         </activity>
+        <activity android:name=".NewRecipeActivity"></activity>
     </application>
 
 </manifest>

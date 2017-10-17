@@ -14,10 +14,10 @@
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_menu_contact"
             android:title="Contact" />
-        <!--<item-->
-            <!--android:id="@+id/nav_manage"-->
-            <!--android:icon="@drawable/ic_menu_manage"-->
-            <!--android:title="Tools" />-->
+        <item
+            android:id="@+id/nav_add_recipe"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Add Recipe" />
     </group>
 
     <!--<item android:title="Communicate">-->

@@ -82,10 +82,13 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
             Intent contactIntent = new Intent(MainActivity.this, ContactActivity.class);
             startActivity(contactIntent);
+
+        } else if (id == R.id.nav_add_recipe) {
+            Intent newRecipeIntent = new Intent(MainActivity.this, NewRecipeActivity.class);
+            startActivity(newRecipeIntent);
+
         }
-//        else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
+// else if (id == R.id.nav_share) {
 //
 //        } else if (id == R.id.nav_send) {
 //
