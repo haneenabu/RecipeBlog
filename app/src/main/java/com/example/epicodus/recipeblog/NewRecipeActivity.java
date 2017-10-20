@@ -23,5 +23,7 @@ public class NewRecipeActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
+
+
     }
 }

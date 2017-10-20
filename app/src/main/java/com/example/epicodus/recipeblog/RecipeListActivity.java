@@ -10,12 +10,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class RecipeListActivity extends AppCompatActivity {
     private String[] recipesTitle = new String[] {"Mac & Cheese", "Greek Salad", "Roasted Chicken", "Fluffy Pancakes", "Veggie Lasagna"};
     private String[] recipes = new String[]{"1. Bring the noodles to a boil", "1. Cut the veggies", "1. Roast the Chicken", "1.Mix the Pancake Mix", "1. PreHeat the Oven"};
+
 
     @Bind(R.id.listView) ListView mListView;
 
