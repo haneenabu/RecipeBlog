@@ -45,17 +45,20 @@ public class YummlyService {
             String jsonData = response.body().string();
 
             JSONObject yummlyJSON = new JSONObject(jsonData);
-            JSONArray resultsJSON = yummlyJSON.getJSONArray("results");
+            JSONArray resultsJSON = yummlyJSON.getJSONArray("matches");
 
             for (int i=0; i < resultsJSON.length(); i++){
                 JSONObject recipeJSON = resultsJSON.getJSONObject(i);
 
                 String recipeName = recipeJSON.getString("recipeName");
                 int totalTime = recipeJSON.getInt("totalTimeInSeconds");
-                String ingredientsString = recipeJSON.getString("ingredients");
+//                String ingredientsString = recipeJSON.getString("ingredients");
                 int rating = recipeJSON.getInt("rating");
 
-                String [] ingredients = ingredientsString.split(",");
+//                String [] ingredients = ingredientsString.split(",");
+
+                ArrayList<String> ingredients = new ArrayList<>();
+                JSONArray ingedientJSON = recipeJSON.getJSONArray("ingredients");
 
                 Recipe recipe = new Recipe(recipeName, totalTime, ingredients, rating);
                 recipes.add(recipe);

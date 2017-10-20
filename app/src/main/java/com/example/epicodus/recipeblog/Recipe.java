@@ -1,5 +1,7 @@
 package com.example.epicodus.recipeblog;
 
+import java.util.ArrayList;
+
 /**
  * Created by Guest on 10/20/17.
  */
@@ -7,10 +9,10 @@ package com.example.epicodus.recipeblog;
 public class Recipe {
     private String mRecipeName;
     private int mTotalTime;
-    private String[] mIngedients;
+    private ArrayList<String> mIngedients = new ArrayList<>();
     private int mRating;
 
-    public Recipe(String recipeName, int totalTime, String[] ingerdients, int rating){
+    public Recipe(String recipeName, int totalTime, ArrayList<String> ingerdients, int rating){
         this.mRecipeName = recipeName;
         this.mTotalTime = totalTime;
         this.mIngedients = ingerdients;
@@ -25,7 +27,7 @@ public class Recipe {
         return mTotalTime;
     }
 
-    public String[] getmIngedients() {
+    public ArrayList<String> getmIngedients() {
         return mIngedients;
     }
 
