@@ -3,6 +3,7 @@ package com.example.epicodus.recipeblog;
 import android.support.annotation.BinderThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,15 +11,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class RecipeListActivity extends AppCompatActivity {
-    private String[] recipesTitle = new String[] {"Mac & Cheese", "Greek Salad", "Roasted Chicken", "Fluffy Pancakes", "Veggie Lasagna"};
-    private String[] recipes = new String[]{"1. Bring the noodles to a boil", "1. Cut the veggies", "1. Roast the Chicken", "1.Mix the Pancake Mix", "1. PreHeat the Oven"};
-
 
     @Bind(R.id.listView) ListView mListView;
 
@@ -30,14 +32,34 @@ public class RecipeListActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        RecipesArrayAdapter adapter = new RecipesArrayAdapter(this, android.R.layout.simple_list_item_1, recipesTitle, recipes);
-        mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String recipe= ((TextView)view).getText().toString();
                 Toast.makeText(RecipeListActivity.this, recipe, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        getRecipes("");
+    }
+    private void getRecipes(String food){
+        final YummlyService yummlyService = new YummlyService();
+        yummlyService.findRecipes(food, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                try {
+                    String jsonData = response.body().string();
+                    Log.v("INSIDE RECIPELIST", jsonData);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
