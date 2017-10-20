@@ -7,4 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="about_paragraph">Healthy Recipe is an Android App created to bring healthy blogging another step closer. This App will allow users to share their recipes and great foods with a community of user all while being aware of the caloric content of the recipes shared. That way you can choose recipes and still be mindful of healthy eating! </string>
     <string name="contact_us">For any questions, conerns or feedback please contact us at: abukhater.haneen@gmail.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

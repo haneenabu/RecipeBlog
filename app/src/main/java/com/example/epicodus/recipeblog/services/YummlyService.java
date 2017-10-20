@@ -56,7 +56,6 @@ public class YummlyService {
                 String recipeName = recipeJSON.getString("recipeName");
                 int totalTime = recipeJSON.getInt("totalTimeInSeconds");
 
-//                String ingredients = recipeJSON.getString("ingredients");
 
                 int rating = recipeJSON.getInt("rating");
 
@@ -65,22 +64,14 @@ public class YummlyService {
                 imageUrl =imageJSON.get(0).toString();
 
 
-//              String [] ingredients = ingredientsString.split(",");
-//                ArrayList<String> ingredients = new ArrayList<>();
-//                JSONArray ingedientJSON = recipeJSON.getJSONArray("ingredients");
-
-
                 ArrayList<String> ingredients = new ArrayList<>();
                 JSONArray ingredientJSON = recipeJSON.getJSONArray("ingredients");
                 for (int j = 0; j < ingredientJSON.length(); j++) {
                     ingredients.add(ingredientJSON.get(j).toString());
                 }
 
-                System.out.println("IMAGE URL ************* "+imageUrl);
-
 
                 Recipe recipe = new Recipe(recipeName, totalTime, ingredients, rating, imageUrl);
-                Log.d("RecipeService", recipe.getmImage());
                 recipes.add(recipe);
             }
 
