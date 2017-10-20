@@ -1,13 +1,15 @@
-package com.example.epicodus.recipeblog;
+package com.example.epicodus.recipeblog.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ContactActivity extends AppCompatActivity {
+import com.example.epicodus.recipeblog.R;
+
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact);
+        setContentView(R.layout.activity_about);
     }
 }

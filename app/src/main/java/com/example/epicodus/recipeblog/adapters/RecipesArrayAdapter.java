@@ -1,4 +1,4 @@
-package com.example.epicodus.recipeblog;
+package com.example.epicodus.recipeblog.adapters;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;

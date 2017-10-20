@@ -1,6 +1,9 @@
-package com.example.epicodus.recipeblog;
+package com.example.epicodus.recipeblog.services;
 
 import android.util.Log;
+
+import com.example.epicodus.recipeblog.Constants;
+import com.example.epicodus.recipeblog.models.Recipe;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,15 +55,32 @@ public class YummlyService {
 
                 String recipeName = recipeJSON.getString("recipeName");
                 int totalTime = recipeJSON.getInt("totalTimeInSeconds");
-//                String ingredientsString = recipeJSON.getString("ingredients");
+
+//                String ingredients = recipeJSON.getString("ingredients");
+
                 int rating = recipeJSON.getInt("rating");
 
-//                String [] ingredients = ingredientsString.split(",");
+                String imageUrl;
+                JSONArray imageJSON = recipeJSON.getJSONArray("smallImageUrls");
+                imageUrl =imageJSON.get(0).toString();
+
+
+//              String [] ingredients = ingredientsString.split(",");
+//                ArrayList<String> ingredients = new ArrayList<>();
+//                JSONArray ingedientJSON = recipeJSON.getJSONArray("ingredients");
+
 
                 ArrayList<String> ingredients = new ArrayList<>();
-                JSONArray ingedientJSON = recipeJSON.getJSONArray("ingredients");
+                JSONArray ingredientJSON = recipeJSON.getJSONArray("ingredients");
+                for (int j = 0; j < ingredientJSON.length(); j++) {
+                    ingredients.add(ingredientJSON.get(j).toString());
+                }
 
-                Recipe recipe = new Recipe(recipeName, totalTime, ingredients, rating);
+                System.out.println("IMAGE URL ************* "+imageUrl);
+
+
+                Recipe recipe = new Recipe(recipeName, totalTime, ingredients, rating, imageUrl);
+                Log.d("RecipeService", recipe.getmImage());
                 recipes.add(recipe);
             }
 

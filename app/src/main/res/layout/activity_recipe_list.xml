@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.epicodus.recipeblog.RecipeListActivity">
+    tools:context="com.example.epicodus.recipeblog.ui.RecipeListActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -13,12 +13,9 @@
         android:id="@+id/aboutImage"
         android:scaleType="centerCrop"/>
 
-    <ListView
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp"
-        android:background="#70e3e3e3"/>
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recylclerViewer"/>
+</RelativeLayout>

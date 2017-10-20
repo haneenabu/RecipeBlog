@@ -1,9 +1,11 @@
-package com.example.epicodus.recipeblog;
+package com.example.epicodus.recipeblog.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+
+import com.example.epicodus.recipeblog.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
