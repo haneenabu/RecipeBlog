@@ -65,7 +65,7 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.Re
         public void bindRecipe(Recipe recipe){
             Picasso.with(mContext).load(recipe.getmImage()).into(mRecipeImageView);
             mRecipeName.setText(recipe.getmRecipeName());
-            mTimeTextView.setText(String.valueOf(recipe.getmTotalTime()/60));
+            mTimeTextView.setText(String.valueOf(recipe.getmTotalTime()));
             mRatingTextView.setText(String.valueOf(recipe.getmRating()));
         }
     }

@@ -1,11 +1,9 @@
 package com.example.epicodus.recipeblog.models;
 
 import java.util.ArrayList;
+import org.parceler.Parcel;
 
-/**
- * Created by Guest on 10/20/17.
- */
-
+@Parcel
 public class Recipe {
     private String mRecipeName;
     private int mTotalTime;
@@ -26,7 +24,7 @@ public class Recipe {
     }
 
     public int getmTotalTime() {
-        return mTotalTime;
+        return mTotalTime/60;
     }
 
     public ArrayList<String> getmIngedients() {
