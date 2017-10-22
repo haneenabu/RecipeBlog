@@ -16,7 +16,7 @@
 
 ## Description
 
-_This application will allow communities to share recipe blogs, using the ingedients of the recipe, the app will use an API to calculate the calories in a given recipe._
+_This application will allow communities to share recipe blogs. When user selects to view recipes they are shown Paleo specific recipes. Later they will be able to contribute their own healthy recipes_
 
 
 ## Sample Application
@@ -41,18 +41,17 @@ _To use this project, you will need to make sure to install Android Studio._
 * As a user, I want to be able to create a recipe blog.
 * As a user, I want to be able to contact the owner of the application if something goes wrong.
 * As a user, I want to be able to login to a previously created account. (Not yet functional)
-* As a user, I want to be able to be able to see a list of recipies.
-* As a user, I want to be able to see how many calories are in a recipe. (Not yet functional)
-* As a user, I want to be able to see how far I walk/ran in a day. (Not yet functional)
-* As a user, I want to be able to see an about page. (Not yet functional)
+* As a user, I want to be able to be able to see a list of recipes.
+* As a user, I want to be able to add my own recipe to share with the community (Not yet functional)
+* As a user, I want to be able to see an about page.
 
 
 ## Questions or Concerns ##
 _If there are any questions or concerns, please contact me at abukhater.haneen@gmail.com_
 
 ## Known Bugs
-* The add recipe functionality doesnt work yet.
-* Need to add functionality that takes in one ingedient at a time instead of one text box
+* The add recipe functionality doesn't work yet. Need a DB for that.
+* Images don't appear in the detail view of the recipe yet.
 
 
 ## Technologies Used
