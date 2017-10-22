@@ -11,32 +11,38 @@
         android:layout_height="match_parent"
         android:src="@drawable/background2"
         android:id="@+id/aboutImage"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/contactTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
         android:text="Contact Us"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="247dp"
         android:layout_height="75dp"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="38dp"
         android:text="@string/contact_us"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="italic"
         tools:layout_editor_absoluteX="69dp"
         tools:layout_editor_absoluteY="101dp"
-        android:background="#70e3e3e3"/>
+        android:background="#70e3e3e3"
+        android:id="@+id/contactText"
+        android:layout_below="@+id/contactTitle"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

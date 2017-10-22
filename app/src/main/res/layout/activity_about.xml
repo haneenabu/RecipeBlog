@@ -14,29 +14,33 @@
         android:scaleType="centerCrop"/>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/aboutTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="43dp"
         android:text="About Recipe Blog"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="246dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        tools:layout_editor_absoluteY="246dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/aboutText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="42dp"
+        android:layout_alignEnd="@+id/aboutTitle"
+        android:layout_alignStart="@+id/aboutTitle"
+        android:layout_below="@+id/aboutTitle"
+        android:layout_marginTop="34dp"
+        android:background="#70e3e3e3"
         android:text="@string/about_paragraph"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="18sp"
-        android:background="#70e3e3e3"/>
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
 
 </RelativeLayout>

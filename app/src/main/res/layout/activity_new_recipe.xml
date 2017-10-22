@@ -115,6 +115,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Add Recipe"
-        android:id="@+id/button2" />
+        android:id="@+id/addRecipeButton" />
 
 </RelativeLayout>
