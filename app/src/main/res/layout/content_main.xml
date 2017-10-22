@@ -15,15 +15,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:text="LogIn"
-        tools:layout_editor_absoluteY="447dp"
-        tools:layout_editor_absoluteX="8dp"
-        android:textAlignment="center"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp" />
+    <!--<Button-->
+        <!--android:layout_width="368dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="LogIn"-->
+        <!--tools:layout_editor_absoluteY="447dp"-->
+        <!--tools:layout_editor_absoluteX="8dp"-->
+        <!--android:textAlignment="center"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="11dp" />-->
 
 </RelativeLayout>

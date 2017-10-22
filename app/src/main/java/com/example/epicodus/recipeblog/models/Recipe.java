@@ -13,14 +13,18 @@ public class Recipe {
 
     public Recipe(){}
 
-    public Recipe(String recipeName, int totalTime, ArrayList<String> ingerdients, int rating, String image){
+    public Recipe(String recipeName, int totalTime, ArrayList<String> ingredients, int rating, String image){
         this.mRecipeName = recipeName;
         this.mTotalTime = totalTime;
-        this.mIngedients = ingerdients;
+        this.mIngedients = ingredients;
         this.mRating= rating;
-        this.mImage= image;
+        this.mImage= getLargeImageURL(image);
     }
 
+    public String getLargeImageURL(String image){
+        String largeImageUrl = image.substring(0, image.length() - 4);
+        return largeImageUrl;
+    }
     public String getmRecipeName() {
         return mRecipeName;
     }

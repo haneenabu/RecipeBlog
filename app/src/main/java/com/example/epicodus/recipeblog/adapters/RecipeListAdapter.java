@@ -27,6 +27,9 @@ import butterknife.ButterKnife;
  */
 
 public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.RecipeViewHolder>{
+    private static final int MAX_WIDTH = 200;
+    private static final int MAX_HEIGHT = 200;
+
     private ArrayList<Recipe> mRecipes = new ArrayList<>();
     private Context mContext;
 
@@ -63,24 +66,31 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.Re
         public RecipeViewHolder(View itemView){
             super(itemView);
             ButterKnife.bind(this, itemView);
+
             mContext= itemView.getContext();
             itemView.setOnClickListener(this);
+        }
+
+        public void bindRecipe(Recipe recipe){
+
+            mRecipeName.setText(recipe.getmRecipeName());
+            mTimeTextView.setText(String.valueOf(recipe.getmTotalTime()));
+            mRatingTextView.setText(String.valueOf(recipe.getmRating()));
+            Picasso.with(mContext).load(recipe.getmImage())
+                    .resize(MAX_WIDTH, MAX_HEIGHT)
+                    .centerCrop()
+                    .into(mRecipeImageView);
         }
 
         @Override
         public void onClick(View v){
             int itemPosition = getLayoutPosition();
             Intent intent = new Intent(mContext, RecipeDetailActivity.class);
-            intent.putExtra("position", itemPosition);
+            intent.putExtra("position", itemPosition + "");
             intent.putExtra("recipes", Parcels.wrap(mRecipes));
             mContext.startActivity(intent);
         }
 
-        public void bindRecipe(Recipe recipe){
-            Picasso.with(mContext).load(recipe.getmImage()).into(mRecipeImageView);
-            mRecipeName.setText(recipe.getmRecipeName());
-            mTimeTextView.setText(String.valueOf(recipe.getmTotalTime()));
-            mRatingTextView.setText(String.valueOf(recipe.getmRating()));
-        }
+
     }
 }

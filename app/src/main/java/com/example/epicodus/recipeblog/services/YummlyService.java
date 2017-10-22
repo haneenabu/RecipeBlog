@@ -19,9 +19,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-/**
- * Created by Guest on 10/20/17.
- */
 
 public class YummlyService {
     public static void findRecipes(String food, Callback callback){
@@ -56,20 +53,17 @@ public class YummlyService {
                 String recipeName = recipeJSON.getString("recipeName");
                 int totalTime = recipeJSON.getInt("totalTimeInSeconds");
 
-
                 int rating = recipeJSON.getInt("rating");
 
                 String imageUrl;
                 JSONArray imageJSON = recipeJSON.getJSONArray("smallImageUrls");
                 imageUrl =imageJSON.get(0).toString();
 
-
                 ArrayList<String> ingredients = new ArrayList<>();
                 JSONArray ingredientJSON = recipeJSON.getJSONArray("ingredients");
                 for (int j = 0; j < ingredientJSON.length(); j++) {
                     ingredients.add(ingredientJSON.get(j).toString());
                 }
-
 
                 Recipe recipe = new Recipe(recipeName, totalTime, ingredients, rating, imageUrl);
                 recipes.add(recipe);
