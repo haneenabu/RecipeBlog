@@ -11,6 +11,8 @@ public class Recipe {
     private int mRating;
     private String mImage;
 
+    public Recipe(){}
+
     public Recipe(String recipeName, int totalTime, ArrayList<String> ingerdients, int rating, String image){
         this.mRecipeName = recipeName;
         this.mTotalTime = totalTime;
