@@ -73,7 +73,6 @@ public class YummlyService {
             e.printStackTrace();
         }catch (JSONException e){
             e.printStackTrace();
-            Log.d("INSIDE JSON ", "test" +e);
         }
         return recipes;
     }

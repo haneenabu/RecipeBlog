@@ -88,11 +88,6 @@ public class MainActivity extends AppCompatActivity
             startActivity(newRecipeIntent);
 
         }
-// else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

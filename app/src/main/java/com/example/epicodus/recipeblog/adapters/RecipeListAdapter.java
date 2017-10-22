@@ -22,10 +22,6 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * Created by Guest on 10/20/17.
- */
-
 public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.RecipeViewHolder>{
     private static final int MAX_WIDTH = 200;
     private static final int MAX_HEIGHT = 200;
