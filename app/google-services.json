@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "392147866141",
+    "firebase_url": "https://blog-recipe.firebaseio.com",
+    "project_id": "blog-recipe",
+    "storage_bucket": "blog-recipe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392147866141:android:7191a199894dee41",
+        "android_client_info": {
+          "package_name": "com.example.epicodus.recipeblog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392147866141-qul9rogqqp2b1jm4mcr6g3kb45kvugig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz8-_YPdtk8-Jd75a7-0X7BwfR3RQYACw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

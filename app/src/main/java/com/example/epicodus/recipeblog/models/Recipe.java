@@ -1,15 +1,17 @@
 package com.example.epicodus.recipeblog.models;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import org.parceler.Parcel;
 
 @Parcel
 public class Recipe {
-    private String mRecipeName;
-    private int mTotalTime;
-    private ArrayList<String> mIngedients;
-    private int mRating;
-    private String mImage;
+     String mRecipeName;
+     int mTotalTime;
+     List<String> mIngedients = new ArrayList<> ();
+     int mRating;
+     String mImage;
 
     public Recipe(){}
 
@@ -33,7 +35,7 @@ public class Recipe {
         return mTotalTime/60;
     }
 
-    public ArrayList<String> getmIngedients() {
+    public List<String> getmIngedients() {
         return mIngedients;
     }
 

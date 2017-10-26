@@ -9,10 +9,14 @@ package com.example.epicodus.recipeblog.ui;
         import android.view.ViewGroup;
         import android.widget.ImageView;
         import android.widget.TextView;
+        import android.widget.Toast;
 
 
+        import com.example.epicodus.recipeblog.Constants;
         import com.example.epicodus.recipeblog.R;
         import com.example.epicodus.recipeblog.models.Recipe;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
         import com.squareup.picasso.Picasso;
 
 
@@ -65,6 +69,7 @@ public class RecipeDetailFragment extends Fragment implements View.OnClickListen
         mRatingTextView.setText(Integer.toString(mRecipe.getmRating()));
         mTimeTextView.setText(Integer.toString(mRecipe.getmTotalTime()));
         mWebsite.setOnClickListener(this);
+        mSaveRecipeButton.setOnClickListener(this);
 
         return view;
     }
@@ -74,6 +79,13 @@ public class RecipeDetailFragment extends Fragment implements View.OnClickListen
         if (view == mWebsite){
             Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://google.com/search?q=" + mRecipe.getmRecipeName()));
             startActivity(webIntent);
+        }
+        if (view == mSaveRecipeButton){
+            DatabaseReference recipeRef = FirebaseDatabase
+                    .getInstance()
+                    .getReference(Constants.FIREBASE_CHILD_RECIPE);
+            recipeRef.push().setValue(mRecipe);
+            Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
         }
     }
 
