@@ -25,6 +25,24 @@
         <!--android:layout_alignParentBottom="true"-->
         <!--android:layout_centerHorizontal="true"-->
         <!--android:layout_marginBottom="11dp" />-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Search Foods"
+        android:layout_marginBottom="83dp"
+        android:layout_above="@+id/savedRecipesButtonMain"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/foodEditText"
+        android:background="@color/colorLight"
+        android:padding="10dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:text="Search"
+        android:layout_above="@+id/savedRecipesButtonMain"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/findFoodButton"/>
     <Button
         android:id="@+id/savedRecipesButtonMain"
         android:layout_width="match_parent"

@@ -1,5 +1,7 @@
 package com.example.epicodus.recipeblog.ui;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +10,7 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.epicodus.recipeblog.Constants;
 import com.example.epicodus.recipeblog.R;
 import com.example.epicodus.recipeblog.adapters.RecipeListAdapter;
 import com.example.epicodus.recipeblog.models.Recipe;
@@ -26,6 +29,8 @@ public class RecipeListActivity extends AppCompatActivity {
 
     @Bind(R.id.recylclerViewer) RecyclerView mRecyclerView;
     private RecipeListAdapter mAdapter;
+    private SharedPreferences mSharedPreferences;
+    private String mRecentFoods;
 
     public ArrayList<Recipe> recipes = new ArrayList<>();
 
@@ -37,7 +42,12 @@ public class RecipeListActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        getRecipes("");
+
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mRecentFoods = mSharedPreferences.getString(Constants.PREFERENCES_FOOD_KEY, null);
+        if (mRecentFoods != null){
+            getRecipes(mRecentFoods);
+        }
     }
     private void getRecipes(String food){
         final YummlyService yummlyService = new YummlyService();
