@@ -11,12 +11,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.epicodus.recipeblog.R;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+
+    @Bind(R.id.savedRecipesButtonMain) Button mSavedRecipesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,17 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ButterKnife.bind(this);
+        mSavedRecipesButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v){
+        if (v == mSavedRecipesButton){
+            Intent intent = new Intent(MainActivity.this, SavedRecipesListActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override

@@ -41,7 +41,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.epicodus.recipeblog.ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.RecipeDetailActivity"></activity>
+        <activity android:name=".ui.RecipeDetailActivity" />
+        <activity android:name=".ui.SavedRecipesListActivity" />
+        <activity android:name=".ui.CreateAccountActivity"></activity>
     </application>
 
 </manifest>

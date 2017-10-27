@@ -41,6 +41,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
+
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:support-v4:26.+'
     compile 'com.android.support:design:26.+'
@@ -55,7 +56,6 @@ dependencies {
     compile 'com.firebaseui:firebase-ui-database:0.4.1'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'org.parceler:parceler:1.1.6'
-
 }
 apply plugin: 'com.google.gms.google-services'
 
