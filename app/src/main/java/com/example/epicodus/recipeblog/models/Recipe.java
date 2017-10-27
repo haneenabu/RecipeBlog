@@ -12,6 +12,7 @@ public class Recipe {
      List<String> mIngedients = new ArrayList<> ();
      int mRating;
      String mImage;
+    private String pushId;
 
     public Recipe(){}
 
@@ -45,5 +46,13 @@ public class Recipe {
 
     public String getmImage() {
         return mImage;
+    }
+
+    public String getPushId() {
+        return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
     }
 }

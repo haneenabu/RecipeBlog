@@ -10,6 +10,8 @@ import com.example.epicodus.recipeblog.R;
 import com.example.epicodus.recipeblog.adapters.FirebaseRecipeViewHolder;
 import com.example.epicodus.recipeblog.models.Recipe;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -25,13 +27,17 @@ public class SavedRecipesListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_recipe_list);
         ButterKnife.bind(this);
 
-        mRecipeReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_RECIPE);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+
+        mRecipeReference = FirebaseDatabase
+                .getInstance()
+                .getReference(Constants.FIREBASE_CHILD_RECIPE)
+                .child(uid);
         setUpFirebaseAdapter();
     }
     private void setUpFirebaseAdapter(){
