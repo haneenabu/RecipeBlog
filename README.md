@@ -20,16 +20,21 @@ _This application will allow communities to share recipe blogs. When user select
 
 
 ## Sample Application
+
 _HomePage View_
+
 ![HomePage](images/homepage.png)
 
 _Navigation Drawer Menu_
+
 ![NavDrawer](images/NavDrawer.png)
 
 _Recipe List_
+
 ![RecipeList](images/recipeList.png)
 
 _Detail View_
+
 ![DetailView](images/detailView.png)
 
 
