@@ -20,7 +20,10 @@ _This application will allow communities to share recipe blogs. When user select
 
 
 ## Sample Application
-_Images_
+![HomePage](images/homepage.png)
+![HomePage](images/NavDrawer.png)
+![HomePage](images/recipeList.png)
+![HomePage](images/detailView.png)
 
 
 ## Setup Requirements
