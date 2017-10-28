@@ -48,11 +48,10 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mRecentFoods = mSharedPreferences.getString(Constants.PREFERENCES_FOOD_KEY, null);
-        Log.d("Shared Pref Food", mRecentFoods);
+
         
         mEditor = mSharedPreferences.edit();
 
