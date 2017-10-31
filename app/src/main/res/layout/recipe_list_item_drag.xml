@@ -2,67 +2,62 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <ImageView
         android:layout_width="130dp"
         android:layout_height="100dp"
         android:id="@+id/recipeImageView"
-        android:src="@drawable/background2"
+        android:src="@drawable/background"
         android:scaleType="centerCrop"/>
+
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/dragIcon"
-            android:layout_alignLeft="@+id/recipeImageView"
-            android:layout_alignBottom="@+id/recipeImageView"
-            android:gravity = "bottom|left"
-            android:src="@drawable/ic_reorder_white_24dp"/>
-    </RelativeLayout>
+        android:id="@+id/dragIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/recipeImageView"
+        android:layout_alignLeft="@+id/recipeImageView"
+        android:gravity="bottom|left"
+        android:src="@drawable/ic_reorder_white_24dp" />
+</RelativeLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffffff"
-        android:orientation="vertical"
-        android:padding="10dp">
+android:layout_width="match_parent"
+android:layout_height="103dp"
+android:orientation="vertical"
+android:padding="10dp">
 
-        <TextView
-            android:id="@+id/recipeName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Recipe Name"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/timeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/recipeName"
-            android:text="Example Text"
-            android:layout_alignParentLeft = "true"
-            android:layout_alignParentStart = "true"
-            android:textStyle="italic"/>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rating"
-                android:id="@+id/ratingTextView"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:textColor="@color/colorAccent"/>
-        </RelativeLayout>
-
-
-    </LinearLayout>
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/recipeName"
+    android:text="Recipe Title"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="20dp"
+    android:textStyle="bold"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time in Secs"
+        android:textStyle="italic"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/ratingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Rating"
+        android:textColor="@color/colorAccent" />
+</RelativeLayout>
+</LinearLayout>
 </LinearLayout>
