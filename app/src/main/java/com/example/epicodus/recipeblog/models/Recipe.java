@@ -13,6 +13,7 @@ public class Recipe {
      int mRating;
      String mImage;
     private String pushId;
+    String index;
 
     public Recipe(){}
 
@@ -22,6 +23,7 @@ public class Recipe {
         this.mIngedients = ingredients;
         this.mRating= rating;
         this.mImage= getLargeImageURL(image);
+        this.index = "not_specified";
     }
 
     public String getLargeImageURL(String image){
@@ -54,5 +56,13 @@ public class Recipe {
 
     public void setPushId(String pushId) {
         this.pushId = pushId;
+    }
+
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
     }
 }
