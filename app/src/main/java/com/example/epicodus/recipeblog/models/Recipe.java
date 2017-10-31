@@ -33,7 +33,7 @@ public class Recipe {
     }
 
     public int getmTotalTime() {
-        return mTotalTime/60;
+        return (mTotalTime/60);
     }
 
     public List<String> getmIngedients() {

@@ -29,6 +29,7 @@ public class YummlyService {
         urlBuilder.addQueryParameter(Constants.API_ID_PARAMETER, Constants.API_ID);
         urlBuilder.addQueryParameter(Constants.API_KEY_PARAMETER, Constants.API_KEY);
         urlBuilder.addQueryParameter(Constants.YUMMLY_FOOD_QUERY_PARAMETER, food);
+//        urlBuilder.addQueryParameter(Constants.PREFERENCES_FOOD_KEY, food);
 
         String url = urlBuilder.build().toString();
 
