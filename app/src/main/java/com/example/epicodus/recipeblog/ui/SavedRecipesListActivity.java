@@ -38,7 +38,6 @@ public class SavedRecipesListActivity extends AppCompatActivity implements OnSta
         setContentView(R.layout.activity_recipe_list);
         ButterKnife.bind(this);
 
-
         setUpFirebaseAdapter();
     }
     private void setUpFirebaseAdapter(){
