@@ -11,5 +11,5 @@ public class Constants {
 
     public static final String FIREBASE_CHILD_RECIPE = "recipes";
     public static final String PREFERENCES_FOOD_KEY = "food";
-
+    public static final String FIREBASE_QUERY_INDEX = "index";
 }
