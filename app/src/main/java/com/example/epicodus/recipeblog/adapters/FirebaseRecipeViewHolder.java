@@ -30,6 +30,7 @@ public class FirebaseRecipeViewHolder extends RecyclerView.ViewHolder implements
     private static final int MAX_WIDTH = 200;
     private static final int MAX_HEIGHT = 200;
 
+    public ImageView imageView;
     View mView;
     Context mContext;
 
@@ -43,7 +44,7 @@ public class FirebaseRecipeViewHolder extends RecyclerView.ViewHolder implements
         TextView nameTextView = (TextView) mView.findViewById(R.id.recipeName);
         TextView ratingTextView = (TextView) mView.findViewById(R.id.ratingTextView);
         TextView timeTextView = (TextView) mView.findViewById(R.id.timeTextView);
-        ImageView imageView = (ImageView) mView.findViewById(R.id.recipeImageView);
+        imageView = (ImageView) mView.findViewById(R.id.recipeImageView);
 
         nameTextView.setText(recipe.getmRecipeName());
         ratingTextView.setText("Rating: " + Integer.toString(recipe.getmRating()));
