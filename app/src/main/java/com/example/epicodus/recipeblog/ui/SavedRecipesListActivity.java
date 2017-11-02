@@ -41,6 +41,7 @@ public class SavedRecipesListActivity extends AppCompatActivity implements OnSta
 
         setUpFirebaseAdapter();
     }
+
     private void setUpFirebaseAdapter(){
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

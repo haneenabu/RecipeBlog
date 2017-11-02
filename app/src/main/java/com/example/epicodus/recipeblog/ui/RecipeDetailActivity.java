@@ -28,7 +28,8 @@ public class RecipeDetailActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         mRecipes = Parcels.unwrap(getIntent().getParcelableExtra("recipes"));
-        int startingPosition= Integer.parseInt(getIntent().getStringExtra("position"));
+//        int startingPosition= Integer.parseInt(getIntent().getStringExtra("position"));
+        int startingPosition = getIntent().getIntExtra("position", 0);
 
 //                getIntent().getIntExtra("position", 0);
 

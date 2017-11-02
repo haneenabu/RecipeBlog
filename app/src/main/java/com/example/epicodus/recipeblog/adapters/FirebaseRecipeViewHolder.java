@@ -26,7 +26,7 @@ import java.util.ArrayList;
  * Created by haneenabu-khater on 10/26/17.
  */
 
-public class FirebaseRecipeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+public class FirebaseRecipeViewHolder extends RecyclerView.ViewHolder {
     private static final int MAX_WIDTH = 200;
     private static final int MAX_HEIGHT = 200;
 
@@ -38,7 +38,7 @@ public class FirebaseRecipeViewHolder extends RecyclerView.ViewHolder implements
         super(itemView);
         mView = itemView;
         mContext = itemView.getContext();
-        itemView.setOnClickListener(this);
+//        itemView.setOnClickListener(this);
     }
     public void bindRecipe(Recipe recipe){
         TextView nameTextView = (TextView) mView.findViewById(R.id.recipeName);
@@ -49,38 +49,39 @@ public class FirebaseRecipeViewHolder extends RecyclerView.ViewHolder implements
         nameTextView.setText(recipe.getmRecipeName());
         ratingTextView.setText("Rating: " + Integer.toString(recipe.getmRating()));
         timeTextView.setText("Time in Mins: "+Integer.toString(recipe.getmTotalTime()));
-        Picasso.with(mContext).load(recipe.getmImage())
+        Picasso.with(mContext)
+                .load(recipe.getmImage())
                 .resize(MAX_WIDTH, MAX_HEIGHT)
                 .centerCrop()
                 .into(imageView);
     }
 
-    @Override
-    public void onClick(View view){
-        final ArrayList<Recipe> recipes = new ArrayList<>();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_RECIPE);
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot: dataSnapshot.getChildren()){
-                    recipes.add(snapshot.getValue(Recipe.class));
-                }
-                int itemPosition = getLayoutPosition();
-
-                Intent intent = new Intent(mContext, RecipeDetailActivity.class);
-                intent.putExtra("position", itemPosition + "");
-                intent.putExtra("recipes", Parcels.wrap(recipes));
-
-                mContext.startActivity(intent);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-    }
+//    @Override
+//    public void onClick(View view){
+//        final ArrayList<Recipe> recipes = new ArrayList<>();
+//        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_RECIPE);
+//        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+//
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                for (DataSnapshot snapshot: dataSnapshot.getChildren()){
+//                    recipes.add(snapshot.getValue(Recipe.class));
+//                }
+//                int itemPosition = getLayoutPosition();
+//
+//                Intent intent = new Intent(mContext, RecipeDetailActivity.class);
+//                intent.putExtra("position", itemPosition + "");
+//                intent.putExtra("recipes", Parcels.wrap(recipes));
+//
+//                mContext.startActivity(intent);
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
+//    }
 
 
 }

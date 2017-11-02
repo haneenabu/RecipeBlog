@@ -2,11 +2,13 @@ package com.example.epicodus.recipeblog.adapters;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.MotionEventCompat;
 import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.epicodus.recipeblog.models.Recipe;
+import com.example.epicodus.recipeblog.ui.RecipeDetailActivity;
 import com.example.epicodus.recipeblog.util.ItemTouchHelperAdapter;
 import com.example.epicodus.recipeblog.util.OnStartDragListener;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -15,6 +17,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -64,14 +68,24 @@ public class FirebaseRecipeListAdapter extends FirebaseRecyclerAdapter<Recipe, F
     @Override
     protected void populateViewHolder(final FirebaseRecipeViewHolder viewHolder, Recipe model, int position) {
         viewHolder.bindRecipe(model);
-        //imageview
         viewHolder.imageView.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
             public boolean onTouch(View view, MotionEvent event) {
                 if (MotionEventCompat.getActionMasked(event) == MotionEvent.ACTION_DOWN){
                     mOnStartDragListener.onStartDrag(viewHolder);
                 }
                 return false;
+            }
+        });
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(mContext, RecipeDetailActivity.class);
+                intent.putExtra("position", viewHolder.getAdapterPosition());
+                intent.putExtra("recipes", Parcels.wrap(mRecipes));
+                mContext.startActivity(intent);
             }
         });
 
