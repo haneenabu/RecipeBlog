@@ -4,8 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.RecipeListActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/background2"
+        android:id="@+id/aboutImage"
+        android:scaleType="centerCrop"/>
     <fragment
-        android:id="@+id/fragmentRestaurantList"
+        android:id="@+id/fragmentRecipeList"
         android:name="com.example.epicodus.recipeblog.ui.SavedRecipeListFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

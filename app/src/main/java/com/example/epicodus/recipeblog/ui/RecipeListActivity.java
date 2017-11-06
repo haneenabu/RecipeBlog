@@ -27,56 +27,57 @@ import okhttp3.Response;
 
 public class RecipeListActivity extends AppCompatActivity {
 
-    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
-    private RecipeListAdapter mAdapter;
-    private SharedPreferences mSharedPreferences;
-    private String mRecentFoods;
-
-    public ArrayList<Recipe> recipes = new ArrayList<>();
+//    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
+//    private RecipeListAdapter mAdapter;
+//    private SharedPreferences mSharedPreferences;
+//    private String mRecentFoods;
+//
+//    public ArrayList<Recipe> recipes = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.fragment_recipe_list);
         setContentView(R.layout.activity_recipe_list);
 
-        ButterKnife.bind(this);
-
-
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mRecentFoods = mSharedPreferences.getString(Constants.PREFERENCES_FOOD_KEY, null);
-        if (mRecentFoods != null){
-            getRecipes(mRecentFoods);
-        }
+//        ButterKnife.bind(this);
+//
+//
+//        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        mRecentFoods = mSharedPreferences.getString(Constants.PREFERENCES_FOOD_KEY, null);
+//        if (mRecentFoods != null){
+//            getRecipes(mRecentFoods);
+//        }
     }
-    private void getRecipes(String food){
-        final YummlyService yummlyService = new YummlyService();
-
-        yummlyService.findRecipes(food, new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response)  {
-                recipes = yummlyService.processResults(response);
-
-                RecipeListActivity.this.runOnUiThread(new Runnable() {
-
-                    @Override
-                    public void run() {
-
-                        mAdapter = new RecipeListAdapter(getApplicationContext(), recipes);
-                        mRecyclerView.setAdapter(mAdapter);
-                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RecipeListActivity.this);
-                        mRecyclerView.setLayoutManager(layoutManager);
-                        mRecyclerView.setHasFixedSize(true);
-                    }
-                });
-
-
-            }
-        });
-    }
+//    private void getRecipes(String food){
+//        final YummlyService yummlyService = new YummlyService();
+//
+//        yummlyService.findRecipes(food, new Callback() {
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response)  {
+//                recipes = yummlyService.processResults(response);
+//
+//                RecipeListActivity.this.runOnUiThread(new Runnable() {
+//
+//                    @Override
+//                    public void run() {
+//
+//                        mAdapter = new RecipeListAdapter(getApplicationContext(), recipes);
+//                        mRecyclerView.setAdapter(mAdapter);
+//                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RecipeListActivity.this);
+//                        mRecyclerView.setLayoutManager(layoutManager);
+//                        mRecyclerView.setHasFixedSize(true);
+//                    }
+//                });
+//
+//
+//            }
+//        });
+//    }
 }

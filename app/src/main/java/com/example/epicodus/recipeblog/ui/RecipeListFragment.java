@@ -34,7 +34,7 @@ import okhttp3.Response;
 
 public class RecipeListFragment extends Fragment {
 
-    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
+    @Bind(R.id.recyclerViewlist) RecyclerView mRecyclerView;
 
     private RecipeListAdapter mAdapter;
     public ArrayList<Recipe> mRecipes = new ArrayList<>();
@@ -109,21 +109,21 @@ public class RecipeListFragment extends Fragment {
 //        inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
         MenuItem menuItem = menu.findItem(R.id.foodEditText);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
-            @Override
-            public boolean onQueryTextSubmit(String query){
-               addToSharedPreferences(query);
-                getRecipes(query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText){
-                return false;
-            }
-        });
+//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+//
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+//            @Override
+//            public boolean onQueryTextSubmit(String query){
+//               addToSharedPreferences(query);
+//                getRecipes(query);
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText){
+//                return false;
+//            }
+//        });
 
     }
 
@@ -132,7 +132,7 @@ public class RecipeListFragment extends Fragment {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+//        int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
 //        if (id == R.id.action_logout) {
