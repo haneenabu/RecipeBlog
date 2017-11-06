@@ -27,7 +27,7 @@ import okhttp3.Response;
 
 public class RecipeListActivity extends AppCompatActivity {
 
-    @Bind(R.id.recylclerViewer) RecyclerView mRecyclerView;
+    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
     private RecipeListAdapter mAdapter;
     private SharedPreferences mSharedPreferences;
     private String mRecentFoods;
