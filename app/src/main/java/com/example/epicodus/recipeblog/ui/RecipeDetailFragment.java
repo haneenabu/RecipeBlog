@@ -31,7 +31,7 @@ public class RecipeDetailFragment extends Fragment implements View.OnClickListen
     private static final int MAX_WIDTH = 400;
     private static final int MAX_HEIGHT = 300;
 
-//    @Bind(R.id.recipeImageView) ImageView mImageView;
+
     @Bind(R.id.recipeNameTextView) TextView mRecipeNameText;
     @Bind(R.id.ratingTextView) TextView mRatingTextView;
     @Bind(R.id.timeTextView) TextView mTimeTextView;

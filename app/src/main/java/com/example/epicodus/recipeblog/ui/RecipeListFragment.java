@@ -43,9 +43,7 @@ public class RecipeListFragment extends Fragment {
     private String mRecentFood;
 
 
-    public RecipeListFragment() {
-        // Required empty public constructor
-    }
+    public RecipeListFragment() {}
 
     @Override
     public void onCreate(Bundle savedInstances){
@@ -104,42 +102,14 @@ public class RecipeListFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        super.onCreateOptionsMenu(menu, inflater);
-//        inflater = getMenuInflater();
-        inflater.inflate(R.menu.main, menu);
-        MenuItem menuItem = menu.findItem(R.id.foodEditText);
-//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
-//
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
-//            @Override
-//            public boolean onQueryTextSubmit(String query){
-//               addToSharedPreferences(query);
-//                getRecipes(query);
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText){
-//                return false;
-//            }
-//        });
 
+        super.onCreateOptionsMenu(menu, inflater);
+
+        inflater.inflate(R.menu.main, menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_logout) {
-//            MainActivity.logout();
-//            return true;
-//        }
-
         return super.onOptionsItemSelected(item);
     }
 

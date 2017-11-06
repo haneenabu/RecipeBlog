@@ -26,20 +26,11 @@ import butterknife.ButterKnife;
 
 public class SavedRecipesListActivity extends AppCompatActivity{
 
-//    private DatabaseReference mRecipeReference;
-//    private FirebaseRecipeListAdapter mFirebaseAdapter;
-//    private ItemTouchHelper mItemTouchHelper;
-//
-//    @Bind(R.id.recylclerViewer) RecyclerView mRecyclerView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved_recipe_list);
 
-//        ButterKnife.bind(this);
-
-//        setUpFirebaseAdapter();
     }
 
 

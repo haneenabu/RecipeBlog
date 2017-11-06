@@ -39,7 +39,6 @@ public class SavedRecipeListFragment extends Fragment  implements OnStartDragLis
 
 
     public SavedRecipeListFragment() {
-        // Required empty public constructor
     }
 
 
